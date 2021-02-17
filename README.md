@@ -36,7 +36,7 @@ Güzel Bir Banner Theme Frost için
 ----v2.6----
 İnfo Paneli Psd
 ----v2.7----
-Meta Ayarlanması 
+Meta Ayarlanması
 ----2.8-----
 Seo yapılandırılması
 ----2.9-----
