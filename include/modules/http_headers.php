@@ -21,21 +21,34 @@
       </header>
       <!-- Sayfa açılma hızı !  -->
     <body>
+      <?php
+      $site = $_POST['url'];
+      $header = get_headers($site);
+      ?>
       <form action="" method="post">
       <div class="box1">
         HTTP Headers
      <br>
-    <input type="text" name="url">
+    <input type="text" name="url" value="http://www.">
     <input type="submit" class="An1" value="Get Info">
   </div>
-  <?php
-  $site = $_POST['url'];
-  $baslangic = microtime(TRUE);
-  $time_t =($bitis - $baslangic)*1000;
-  $time_t = round($time_t,5);
-  $ceko = file_get_contents($target);
+  <div class="box4"><div class="sag">
+   <?php
+    echo $header[0]."<br>";
+    echo $header[3]."<br>";
+    echo $header[5]."<br>";
+    echo $header[7]."<br>";
+    echo $header[10]."<br>";
+   ?></div>
+   <div class="sol">
+     <?php
+     echo $header[1]."<br>";
+     echo $header[2]."<br>";
+     echo $header[4]."<br>";
+     echo $header[6]."<br>";?>
+   </div>
+  </div>
 
-  ?>
 </form>
     </body>
     <footer>
