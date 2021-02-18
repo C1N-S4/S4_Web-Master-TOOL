@@ -4,10 +4,10 @@ Premium Web Master Tool for themeforest
 
 
 ----1.8----
-1.HTTP_Header info checker
-2.Page Loading Speed
+1.HTTP_Header info checker +
+2.Page Loading Speed 50%
 3.Tarayıcı detayları
-4.Password Generator
+4.Password Generator +
 ----1.9----
 6.Google Keyword ranking check
 7.Site Analizi
