@@ -20,38 +20,39 @@
       </header>
       <!-- Whois sorgusu !  -->
     <body>
-      <body>
+      <?php
+      //cURL kullanarak veri çekimi yapılıyor.
+          $error = "";
+          $url = $_POST["url"];
+          $whois = array("remoteAddress" => $url);
+          $site = curl_init("https://www.yougetsignal.com/tools/whois-lookup/php/get-whois-lookup-json-data.php");
+          curl_setopt($site, CURLOPT_SSL_VERIFYPEER, false);
+          curl_setopt($site, CURLOPT_RETURNTRANSFER, true);
+          curl_setopt($site, CURLOPT_POST, true);
+          curl_setopt($site, CURLOPT_POSTFIELDS,$whois);
+          $curl = curl_exec($site);
+          $Results = json_decode($curl, true);
+
+
+          if(!$url){
+            $error = "<h1 class='h2'>Enter DOMAIN !</h1>";
+          }else{
+
+          $whois2 = "<div class='ortac'><textarea style='margin: 0px; width: 800px; height: 322px; color: gray;'>".$Results['whoisData']."</textarea></div>";
+          }
+
+
+      ?>
+        <div class="orta">
         <form action="" method="post">
-        <div class="box1">
+
   	   	Search the WHOIS Database
        <br>
   		<input type="text" name="url">
-  		<input type="submit" class="An1" value="Search">
+  		<input type="submit" class="cbutton" value="Search"><br>
+      <?php echo $error;  echo $whois2; ?>
   	</div>
   </form>
-
-<?php
-//cURL kullanarak veri çekimi yapılıyor.
-    $url = $_POST["url"];
-    $whois = array("remoteAddress" => $url);
-    $site = curl_init("https://www.yougetsignal.com/tools/whois-lookup/php/get-whois-lookup-json-data.php");
-    curl_setopt($site, CURLOPT_SSL_VERIFYPEER, false);
-    curl_setopt($site, CURLOPT_RETURNTRANSFER, true);
-    curl_setopt($site, CURLOPT_POST, true);
-    curl_setopt($site, CURLOPT_POSTFIELDS,$whois);
-    $curl = curl_exec($site);
-    $Results = json_decode($curl, true);
-
-
-    if(!$url){
-      echo "<h1 class='h2'>Enter DOMAIN !</h1>";
-    }else{
-
-    echo "<div class='box2'>".$Results['whoisData']."</div>";
-    }
-
-
-?>
     </body>
     <footer>
     <span class="alt">Copyright <a href="https://github.com/C1N-S4"> @C1N-S4</a></span>
