@@ -32,7 +32,7 @@
 
          ?>
 
-<div class="alexatitle">Alexa Rank Checker<br>
+<div class="orta">Alexa Rank Checker<br>
   <form action="" method="post">
 <input type="text" name="info"><div class="submitp"><input type="submit" class="An1"></div></form><br><?php echo "G. Rank: ".$globalRank;?>
 </div>

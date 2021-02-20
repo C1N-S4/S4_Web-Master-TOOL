@@ -156,3 +156,11 @@ textarea {
   font-family: 'Oswald', sans-serif;
   color:white;
 }
+.orta{
+  position: fixed;
+  top:100px;
+  left:650px;
+  font-size: 20px;
+  font-family: 'Oswald', sans-serif;
+  color:white;
+}
