@@ -164,3 +164,11 @@ textarea {
   font-family: 'Oswald', sans-serif;
   color:white;
 }
+.yan{
+  position: fixed;
+  top:250px;
+  left:650px;
+  font-size: 20px;
+  font-family: 'Oswald', sans-serif;
+  color:green;
+}

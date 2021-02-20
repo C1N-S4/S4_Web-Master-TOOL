@@ -16,12 +16,12 @@
       </header>
       <!-- Hash oluşturucu  -->
     <body>
+      <div class="orta">
       <form action="" method="post">
-      <div class="box1">
 	   	Enter what you want encrypted
      <br>
 		<input type="text" name="hash">
-		<input type="submit" class="An1" value="Encrypte">
+		<input type="submit" class="cbutton" value="Encrypte">
 	</div>
 </form>
 <?php
@@ -31,10 +31,11 @@ $hash3 = sha1($hash1);
 $hash4 = hash('sha256', $hash1);
 $hash5 = hash('sha512', $hash1);
 
-echo "<h1 class='hash'>MD5:</h1><h1 class='hash2'>".$hash2."</h1>";
-echo "<h1 class='hash3'>SHA1:</h1><h1 class='hash4'>".$hash3."</h1>";
-echo "<h1 class='hash5'>SHA256:</h1><h1 class='hash6'>".$hash4."</h1>";
-echo "<h1 class='hash7'>SHA512:</h1><div class='hash8'><input type='text' value='.$hash5.'></div>";
+echo "<div class='yan'>";
+echo "MD5:".$hash2."<br>";
+echo "SHA1:".$hash3."<br>";
+echo "SHA256:".$hash4."<br>";
+echo "SHA512:<input type='text' value='.$hash5.'></div>";
 ?>
     </body>
     <footer>
