@@ -51,3 +51,33 @@ span.logo {
 span.logo:hover {
   background-position: 0 100%;
 }
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: right;
+}
+
+li a {
+  font-size: 20px;
+  font-family: 'Oswald', sans-serif;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  height: 41px;
+  background-color: #111;
+  border-bottom: 3px solid red;
+}
+li a.active {
+  border-bottom: 3px solid red;
+}

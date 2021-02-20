@@ -22,6 +22,10 @@
     <body>
     </body>
     <footer>
-    <span class="alt">Copyright <a href="https://github.com/C1N-S4"> @C1N-S4</a></span>
+    <span class="alt">Copyright <a href="https://github.com/C1N-S4"> @C1N-S4</a><?php $dogum = ""; for ($i=1997; $i <= 2021 ; $i++) {
+      $dogum = $i;
+    }?><select>
+  <option><?php echo $dogum ?></option>
+</select></span>
   </footer>
 </html>
