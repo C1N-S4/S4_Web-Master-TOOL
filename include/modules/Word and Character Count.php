@@ -19,13 +19,7 @@
       </header>
       <!-- Boşlukları algılamadan direk karakter ve kelime sayısını verir.  -->
     <body>
-      <div class="orta">
-    <form action="" method="post">
-    <h1 class="h1">Word and Character calculator</h1>
-    <textarea class="textarea1" name="words" rows="15" cols="100"></textarea>
-    <input class="buton" type="submit" value="C" />
-    </form>
-  </div>
+  <div style='w1'></div>
     <?php
   if($_POST){
   $words = $_POST["words"];
