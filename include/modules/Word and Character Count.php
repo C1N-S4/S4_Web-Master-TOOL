@@ -19,21 +19,26 @@
       </header>
       <!-- Boşlukları algılamadan direk karakter ve kelime sayısını verir.  -->
     <body>
-  <div style='w1'></div>
-    <?php
-  if($_POST){
-  $words = $_POST["words"];
-  if(!$words){
-  echo "<h1 class='h2'>Write your words</h1>";
-  }else{
-  echo "<div class='h2'>How many words:".str_word_count($words) ." How many character:".strlen($words)."</div>";
-  }
-  }
+      <?php
+    if($_POST){
+    $words = $_POST["words"];
+    if(!$words){
+    echo "<script>alert('Empty !')</script>";
+    }else{
+    echo "<div class='howmany'>How many words:".str_word_count($words) ." How many character:".strlen($words)."</div>";
+    }
+    }
 
 
+    ?>
+  <div class="w1">
+    <form action="" method="post">
+    <h1 class="h1">Word and Character calculator</h1><hr>
+    <textarea class="textarea1" name="words" rows="15" cols="100"></textarea>
+    <input class="cbutton" type="submit" value="C" />
+    </form>
+</div>
 
-
-  ?>
 
     </body>
     <footer>
