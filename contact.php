@@ -20,12 +20,7 @@
       </header>
       <!--Contact  -->
     <body>
-      <div class="boxing">
-        <h1>Contact</h1>
-        <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec aliquam nisi quis eros placerat, quis fringilla leo pellentesque. Duis est erat, viverra nec dui sit amet, euismod convallis sem. Vestibulum fringilla eu leo et consequat. Suspendisse consectetur interdum libero, efficitur ullamcorper turpis elementum non. Curabitur viverra nisl tellus, ut volutpat.
-        </h2>
-      </div>
-      <div class="reklam"><img src="https://via.placeholder.com/250x800"></div>
+
     </body>
     <footer>
     <span class="alt">Copyright <a href="https://github.com/C1N-S4"> @C1N-S4</a></span>

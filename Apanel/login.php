@@ -5,9 +5,20 @@ include "db.php";
 $username = "";
 $password = "";
 $error = "";
-if(isset($_POST['username']) && isset($_POST['password'])){
- $error ="<div class='alert alert-danger' role='alert'>Please enter your membership information</div>";
-}
+$error2 = "";
+
+
+  if(isset($_POST['username'])){
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+    $sql = "SELECT * FROM admin WHERE username='$username' AND password='$password'";
+    $result = mysqli_query($conn,$sql);
+    if(mysqli_num_rows($result)){
+      $_SESSION['username']=$username;
+      header("location:index.php");
+    }else{
+      $error2 = "<div class='alert alert-danger' role='alert'>Invalid Username or password</div>";
+    }}
  ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -32,7 +43,10 @@ if(isset($_POST['username']) && isset($_POST['password'])){
             <div class="row">
               <div class="col-lg-12">
                 <div class="login-form">
-                  <?php echo $error;?>
+                  <?php
+                  echo $error;
+                  echo $error2;
+                  ?>
                   <div class="text-center">
                     <h1 class="h4 text-gray-900 mb-4">Login</h1>
                   </div>

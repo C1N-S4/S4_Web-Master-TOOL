@@ -1,22 +1,9 @@
 <?php
-$conn = "";
 
-try {
-    $servername = "localhost:3306";
-    $dbname = "webmastertool";
-    $username = "root";
-    $password = "";
+$conn= @mysqli_connect('localhost', 'root', '', 'webmastertool');
 
-    $conn = new PDO(
-        "mysql:host=$servername; dbname=webmastertool",
-        $username, $password
-    );
-
-   $conn->setAttribute(PDO::ATTR_ERRMODE,
-                    PDO::ERRMODE_EXCEPTION);
+if (!$conn) {
+  die('Connect Error: ' . mysqli_connect_error());
 }
-catch(PDOException $e) {
-    echo "Connection failed: " . $e->getMessage();
-}
-
+?>
  ?>
