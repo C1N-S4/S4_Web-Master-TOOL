@@ -172,3 +172,34 @@ textarea {
   font-family: 'Oswald', sans-serif;
   color:green;
 }
+.yanla{
+  position: fixed;
+  top:100px;
+  left:450px;
+  font-size: 20px;
+  font-family: 'Oswald', sans-serif;
+  color:gray;
+}
+.orta1{
+  position: fixed;
+  top:150px;
+  left:450px;
+  font-size: 20px;
+  font-family: 'Oswald', sans-serif;
+  color:white;
+}
+.sag{
+  position: fixed;
+  left:10px;
+  font-size: 15px;
+  font-family: 'Oswald', sans-serif;
+  color:lime;
+}
+.sol{
+  position: fixed;
+  top:350px;
+  left:10px;
+  font-size: 15px;
+  font-family: 'Oswald', sans-serif;
+  color:lime;
+}

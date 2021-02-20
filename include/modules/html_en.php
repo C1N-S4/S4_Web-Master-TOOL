@@ -22,12 +22,12 @@
       <!-- Sayfa açılma hızı !  -->
     <body>
       <body>
-        <div class="orta">
+        <div class="yanla">
           <form method="post" name="pad">
-     <h1 class="h1">Html Encrypt</h1>
-      <textarea name="text" class="textarea1" rows="15" cols="100"></textarea>
-    <input type="button" class="buton2" value="Encrypt" name="compileIt" onClick="generate()" onMouseOver="LightOn(this)" onMouseOut="LightOut(this)">
-    <input class="buton" type="submit" value="Clear"  onMouseOver="LightOn(this)" onMouseOut="LightOut(this)"/>
+     <h1 style="color:green">Html Encrypt</h1>
+      <textarea name="text" class="textarea1" rows="15" cols="100"></textarea><br>
+    <input type="button" class="cbutton" value="Encrypt" name="compileIt" onClick="generate()" onMouseOver="LightOn(this)" onMouseOut="LightOut(this)">
+    <input class="cbutton" type="submit" value="Clear"  onMouseOver="LightOn(this)" onMouseOut="LightOut(this)"/>
       </form>
       </div>
     </body>

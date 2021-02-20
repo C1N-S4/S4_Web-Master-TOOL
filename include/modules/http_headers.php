@@ -25,14 +25,14 @@
       $site = $_POST['url'];
       $header = get_headers($site);
       ?>
+      <div class="orta">
       <form action="" method="post">
-      <div class="box1">
         HTTP Headers
      <br>
     <input type="text" name="url" value="http://www.">
     <input type="submit" class="An1" value="Get Info">
   </div>
-  <div class="box4"><div class="sag">
+  <div class="orta1"><div class="sag">
    <?php
     echo $header[0]."<br>";
     echo $header[3]."<br>";
