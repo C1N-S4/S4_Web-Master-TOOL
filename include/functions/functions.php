@@ -65,4 +65,52 @@ function http(){
   echo $header[4]."<br>";
   echo $header[6]."<br></div>";
 }
+function whois(){
+  $error = "";
+  $url = $_POST["url"];
+  $whois = array("remoteAddress" => $url);
+  $site = curl_init("https://www.yougetsignal.com/tools/whois-lookup/php/get-whois-lookup-json-data.php");
+  curl_setopt($site, CURLOPT_SSL_VERIFYPEER, false);
+  curl_setopt($site, CURLOPT_RETURNTRANSFER, true);
+  curl_setopt($site, CURLOPT_POST, true);
+  curl_setopt($site, CURLOPT_POSTFIELDS,$whois);
+  $curl = curl_exec($site);
+  $Results = json_decode($curl, true);
+
+
+  if(!$url){
+    $error = "<h1 class='h2'>Enter DOMAIN !</h1>";
+  }else{
+
+  $whois2 = "<div class='ortac'><textarea style='margin: 0px; width: 800px; height: 322px; color: gray;'>".$Results['whoisData']."</textarea></div>";
+  }
+echo $error;  echo $whois2;
+}
+
+function w_a(){
+
+  if($_POST){
+  $words = $_POST["words"];
+  if(!$words){
+  echo "<script>alert('Empty !')</script>";
+  }else{
+  echo "<div class='howmany'>How many words:".str_word_count($words) ." How many character:".strlen($words)."</div>";
+  }
+  }
+
+}
+
+function encr(){
+  $hash1 = $_POST["hash"];
+  $hash2 = md5($hash1);
+  $hash3 = sha1($hash1);
+  $hash4 = hash('sha256', $hash1);
+  $hash5 = hash('sha512', $hash1);
+
+  echo "<div class='yan'>";
+  echo "MD5:".$hash2."<br>";
+  echo "SHA1:".$hash3."<br>";
+  echo "SHA256:".$hash4."<br>";
+  echo "SHA512:<input type='text' value='.$hash5.'></div>";
+}
   ?>

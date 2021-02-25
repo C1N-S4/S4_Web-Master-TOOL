@@ -25,17 +25,8 @@
 	</div>
 </form>
 <?php
-$hash1 = $_POST["hash"];
-$hash2 = md5($hash1);
-$hash3 = sha1($hash1);
-$hash4 = hash('sha256', $hash1);
-$hash5 = hash('sha512', $hash1);
-
-echo "<div class='yan'>";
-echo "MD5:".$hash2."<br>";
-echo "SHA1:".$hash3."<br>";
-echo "SHA256:".$hash4."<br>";
-echo "SHA512:<input type='text' value='.$hash5.'></div>";
+  include "../functions/functions.php";
+   encr();
 ?>
     </body>
     <footer>

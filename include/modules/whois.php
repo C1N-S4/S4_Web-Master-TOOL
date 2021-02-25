@@ -22,25 +22,7 @@
     <body>
       <?php
       //cURL kullanarak veri çekimi yapılıyor.
-          $error = "";
-          $url = $_POST["url"];
-          $whois = array("remoteAddress" => $url);
-          $site = curl_init("https://www.yougetsignal.com/tools/whois-lookup/php/get-whois-lookup-json-data.php");
-          curl_setopt($site, CURLOPT_SSL_VERIFYPEER, false);
-          curl_setopt($site, CURLOPT_RETURNTRANSFER, true);
-          curl_setopt($site, CURLOPT_POST, true);
-          curl_setopt($site, CURLOPT_POSTFIELDS,$whois);
-          $curl = curl_exec($site);
-          $Results = json_decode($curl, true);
-
-
-          if(!$url){
-            $error = "<h1 class='h2'>Enter DOMAIN !</h1>";
-          }else{
-
-          $whois2 = "<div class='ortac'><textarea style='margin: 0px; width: 800px; height: 322px; color: gray;'>".$Results['whoisData']."</textarea></div>";
-          }
-
+  include "../functions/functions.php";
 
       ?>
         <div class="orta">
@@ -50,7 +32,7 @@
        <br>
   		<input type="text" name="url">
   		<input type="submit" class="cbutton" value="Search"><br>
-      <?php echo $error;  echo $whois2; ?>
+      <?php  whois(); ?>
   	</div>
   </form>
     </body>

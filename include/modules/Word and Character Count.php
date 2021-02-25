@@ -20,16 +20,8 @@
       <!-- Boşlukları algılamadan direk karakter ve kelime sayısını verir.  -->
     <body>
       <?php
-    if($_POST){
-    $words = $_POST["words"];
-    if(!$words){
-    echo "<script>alert('Empty !')</script>";
-    }else{
-    echo "<div class='howmany'>How many words:".str_word_count($words) ." How many character:".strlen($words)."</div>";
-    }
-    }
-
-
+  include "../functions/functions.php";
+  w_a();
     ?>
   <div class="w1">
     <form action="" method="post">
