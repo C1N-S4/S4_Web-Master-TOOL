@@ -2,8 +2,10 @@
 <html lang="en" dir="ltr">
     <head>
       <meta charset="utf-8">
-      <title>Whois</title>
+      <title>Browser info</title>
        <link rel="stylesheet" href="../../style/style.css">
+       <link rel="icon" href="/favicon.ico" type="image/x-icon">
+       <script type="text/javascript" src="../../include/js/html_enc.js"></script>
     </head>
     <header>
         <ul>
@@ -17,23 +19,23 @@
 
 </ul>
       </header>
-      <!-- Reverse IP domain sorgusu  -->
+      <!-- Borswer Info  -->
     <body>
       <?php
-      //cURL kullanarak veri çekimi yapılıyor.
-    include "../functions/functions.php";
-
-
+    $ip =  getenv("REMOTE_ADDR");
       ?>
+      <div class="za">
         <form action="" method="post">
-        <div class="orta">
-  	   	Remote Address
-       <br>
-  		<input type="text" name="url">
-  		<input type="submit" class="cbutton" value="Search">
-      <?php Reserve(); ?>
-  	</div>
-  </form>
+      <h1>Browser Info Checker___</h1>
+      IP adresiniz:<?php echo $ip ;oca?><br>
+      Kullanıcı Aracısı : <?php echo $_SERVER['HTTP_USER_AGENT'] . "\n\n";?><br>
+      Tarayıcıya göre saat<br>
+      Dil<br>
+      Eklentiler<br>
+      Çerezler<br>
+      Ekran Çözünürlüğü<br>
+      </form>
+      </div>
     </body>
     <footer>
     <span class="alt">Copyright <a href="https://github.com/C1N-S4"> @C1N-S4</a></span>
