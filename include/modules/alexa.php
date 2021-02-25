@@ -23,18 +23,14 @@
       <body>
         <?php
         //xml veri çekimi
-        $url =$_POST['info'];
 
-        $alexa = simplexml_load_file('http://data.alexa.com/data?cli=10&url='.$url);
-
-        $globalRank = number_format( (int) $alexa->SD->POPULARITY['TEXT'] );
-
+      include "../functions/functions.php";
 
          ?>
 
 <div class="orta">Alexa Rank Checker<br>
   <form action="" method="post">
-<input type="text" name="info"><div class="submitp"><input type="submit" class="cbutton"></div></form><br><?php echo "G. Rank: ".$globalRank;?>
+<input type="text" name="info"><div class="submitp"><input type="submit" class="cbutton"></div></form><br><?php alexa(); ?>
 </div>
 
 

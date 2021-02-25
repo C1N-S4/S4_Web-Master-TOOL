@@ -39,4 +39,14 @@
     }
   }
 
+function alexa(){
+
+  $url =$_POST['info'];
+
+  $alexa = simplexml_load_file('http://data.alexa.com/data?cli=10&url='.$url);
+
+  $globalRank = number_format( (int) $alexa->SD->POPULARITY['TEXT'] );
+   echo "G. Rank: ".$globalRank;
+
+}
   ?>
