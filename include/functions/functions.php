@@ -49,4 +49,20 @@ function alexa(){
    echo "G. Rank: ".$globalRank;
 
 }
+
+function http(){
+  $site = $_POST['url'];
+  $header = get_headers($site);
+
+  echo "<div class='sag'>".$header[0]."<br>";
+  echo $header[3]."<br>";
+  echo $header[5]."<br>";
+  echo $header[7]."<br>";
+  echo $header[10]."<br></div>";
+
+  echo "<div class='sol'>".$header[1]."<br>";
+  echo $header[2]."<br>";
+  echo $header[4]."<br>";
+  echo $header[6]."<br></div>";
+}
   ?>

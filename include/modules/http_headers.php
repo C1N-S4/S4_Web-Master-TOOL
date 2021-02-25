@@ -22,8 +22,7 @@
       <!-- Sayfa açılma hızı !  -->
     <body>
       <?php
-      $site = $_POST['url'];
-      $header = get_headers($site);
+  include "../functions/functions.php";
       ?>
       <div class="orta">
       <form action="" method="post">
@@ -32,20 +31,10 @@
     <input type="text" name="url" value="http://www.">
     <input type="submit" class="An1" value="Get Info">
   </div>
-  <div class="orta1"><div class="sag">
+  <div class="orta1">
    <?php
-    echo $header[0]."<br>";
-    echo $header[3]."<br>";
-    echo $header[5]."<br>";
-    echo $header[7]."<br>";
-    echo $header[10]."<br>";
-   ?></div>
-   <div class="sol">
-     <?php
-     echo $header[1]."<br>";
-     echo $header[2]."<br>";
-     echo $header[4]."<br>";
-     echo $header[6]."<br>";?>
+ http();
+   ?>
    </div>
   </div>
 
